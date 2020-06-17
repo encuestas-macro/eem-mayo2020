@@ -1,0 +1,118 @@
+
+body{
+  font-size: 16px;
+  margin-bottom: 400px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.imagen, .title {
+  display: inline-block;
+}
+
+.imagen{
+  width: 20%;
+}
+
+.title{
+  position: relative;
+  top: 10px;
+  padding-top: 10px;
+  width: 70%;
+  text-align: center;
+}
+
+hr.head-ruler {
+  display: block;
+  margin:0.5em auto;
+  border:3px solid #7f5d00;
+}
+
+p {
+  text-align: justify;
+  font-size: 2rem;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+}
+
+.inflacion-container, .tc-container, .pib-container, .covid-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.right {
+  width: 55%;
+}
+
+ .left {
+   width: 40%;
+ }
+ 
+ h2{
+   font-size:3rem;
+   font-weight: 700;
+ }
+
+h3 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+h4 {
+  text-align: center;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 1024px) {
+  
+  .header {
+    width: 100%;
+  }
+  
+  .right img {
+    margin: 0 auto;
+  }
+  
+  .imagen{
+  display: block;
+  margin: 0 auto;
+  width:50%;
+  }
+  
+  .imagen > img{
+    width: 300px;
+  }
+  
+  .right div {
+    margin:0 auto;
+  }
+  
+  .graph-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  }
+  
+  .title{
+    width: 100%;
+    text-align: center;
+    }
+  
+
+  .inflacion-container, .tc-container, .pib-container, .covid-container {
+  width: 100%;
+  display: block;
+  }
+  
+  .right {
+  width: 100%;
+  }
+
+ .left {
+   width: 100%;
+ }
+}
