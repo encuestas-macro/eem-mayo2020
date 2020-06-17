@@ -13,15 +13,26 @@ body{
   width: 20%;
 }
 
+.imagen img {
+  width: 140px;
+  height: 120px;
+}
+
 .title{
   position: relative;
-  top: 10px;
+  top: 40px;
   padding-top: 10px;
   width: 70%;
   text-align: center;
 }
 
-hr.head-ruler {
+.title span {
+  font-size: 20px; 
+  color: #7f5d00;
+  text-transform: uppercase;
+}
+
+.head-ruler {
   display: block;
   margin:0.5em auto;
   border:3px solid #7f5d00;
@@ -75,18 +86,22 @@ h4 {
   
   .right img {
     margin: 0 auto;
-  }
+    width: 300px;
+    }
   
   .imagen{
   display: block;
   margin: 0 auto;
-  width:50%;
+  width: 40%;
   }
   
-  .imagen > img{
-    width: 300px;
+  .imagen img {
+   display: block; 
+   width: 300px;
+   margin: auto;
   }
   
+
   .right div {
     margin:0 auto;
   }
@@ -100,6 +115,8 @@ h4 {
   .title{
     width: 100%;
     text-align: center;
+    position: relative;
+    top: 0;
     }
   
 
