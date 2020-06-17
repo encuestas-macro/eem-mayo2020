@@ -86,7 +86,7 @@ El promedio de las expectativas de crecimiento para el 2021 pasó de 5.1% en ene
 <div class="right">
 #### Evolución de las expectativas de crecimiento 
 ```{r animation_pib, fig.width=5.5, fig.height=3.8}
-#gganimate::animate(animation_crecimiento, height = 4, width = 5.5, units = "in", res = 120)
+gganimate::animate(animation_crecimiento, height = 4, width = 5.5, units = "in", res = 120)
 ```
 </div>
 </div>
