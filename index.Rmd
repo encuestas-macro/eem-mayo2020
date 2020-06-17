@@ -1,0 +1,138 @@
+---
+css: style.css
+pagetitle: "EEM mayo 2020"
+output:
+  html_document: default
+---
+
+
+```{r config, include=FALSE}
+library(dplyr)
+library(forcats)
+  knitr::opts_chunk$set(message = FALSE, warning = FALSE, echo = FALSE)
+load(here::here("data", "eem", "eem_ws"))
+```
+
+
+<!-- Header del documento -->
+<div class = "header">
+
+  <div class="imagen">
+  <img src="img/bcrd_squared.png" alt="drawing" width="130" style="display:inline-block"/>
+  </div>
+  
+  <div class="title">
+  <h2>Banco Central de la República Dominicana<br>
+Encuesta de Expectativas Macroeconómicas</h2>
+  </div>
+  
+</div>
+<hr class="head-ruler">
+
+
+<!-- Inflación -->
+
+### Inflación
+***
+
+<div class="inflacion-container">
+<!-- Redancción -->
+<div class="left">
+Las expectativas de inflación para el 2020 se corrigen a la baja en la medición de mayo, con promedio de 2.71% y mediana de 2.5%. Se identifica una considerable reducción en la dispersión de las expectativas, denotando reducción de la incertidumbre de los analistas. Con este resultado, las expectativas de inflación para el 2020 se desvían por primera vez del rango de meta de 4% +/- 1%.
+
+Hacia el año próximo, el promedio de las expectativas de inflación interanual para mayo se mantiene por debajo del rango de meta (2.72%), pero se recupera y colocan en 3.81% para el cierre del 2021.
+</div>
+
+<div class="right">
+#### Expectativas de inflación para el del año 2020
+```{r plt_inflacion_diciembre, fig.width=5.5, fig.height=3.8}
+plt_boxplot_inflacion_diciembre2020
+```
+</div>
+</div>
+
+### Tipo de cambio
+***
+
+<div class="tc-container">
+<div class="left">
+Los analistas esperan que el tipo de cambio cierre el 2020 al RD$61.22 por cada dólar, para una depreciación implícita interanual promedio de 15.6%. 
+
+De igual forma, para el final del 2021 y a mayo del 2022 la depreciación interanual esperada del tipo de cambio rondaría el 5%, al colocar sus expectativas en 4.8% y 5.1%, respectivamente. Estos resultados confirman la confianza de los analistas en que se reduzcan las presiones alcistas del tipo de cambio y este retorne gradualmente a sus niveles pre-pandemia.
+</div>
+
+<div class="right">
+#### Depreciación implícita del tipo de cambio
+```{r plt_depreciacion, fig.width=5.5, fig.height=3.8}
+plt_depreciacion %>% 
+  plotly::config(displayModeBar = F) 
+```
+</div>
+</div>
+
+
+### Crecimiento del PIB
+***
+<div class="pib-container">
+<div class="left">
+Las expectativas de crecimiento para el año 2020 se han deteriorado en los últimos meses. En la encuesta de mayo la mediana de las expectativas de crecimiento para el año actual se coloca en -2.0%, con un mínimo de -3.6% y un máximo de 0.5%. 
+
+El promedio de las expectativas de crecimiento para el 2021 pasó de 5.1% en enero del 2020 a 4.2% en la medición de mayo, para una corrección a la baja producto de los efectos adversos de la pandemia del COVID-19. Con esta reducción de las expectativas, también se observa un incremento en la dispersión de los pronósticos.
+
+
+</div>
+
+<div class="right">
+#### Evolución de las expectativas de crecimiento 
+```{r animation_pib, fig.width=5.5, fig.height=3.8}
+gganimate::animate(animation_crecimiento, height = 4, width = 5.5, units = "in", res = 120)
+```
+</div>
+</div>
+
+### Tasa de Política Monetaria
+***
+
+<div class="pib-container">
+<div class="left">
+
+Las expectativas sobre la Tasa de Política Monetaria reflejan la percepción de que no serán necesarios estímulos monetarios adicionales por parte del Banco Central a través del canal de tasas de interés, pues los analistas esperan que la TPM se mantenga cerca de su nivel actual, con promedios de 3.53% al cierre del trimestre actual y 3.66% a final de año. 
+
+En los horizontes de 12 y 24 meses las expectativas se distribuyen alrededor de un promedio de 4.04% y 4.69%, respectivamente. 
+
+</div>
+
+<div class="right">
+#### Distribución de las expectativas para la TPM
+```{r desidad_tpm, fig.width=5.5, fig.height=3.8}
+densidad_tpm
+```
+
+</div>
+</div>
+
+### Efectos del COVID-19
+***
+
+<div class="covid-container">
+<div class="left">
+
+En las últimas dos ediciones de la encuesta se han incluido preguntas con la finalidad de captar las expectativas de los analistas respecto a la desviación de variables macroeconómicas importantes ante el choque generado por la pandemia del COVID19.
+
+Se preguntó a los participantes sobre la dirección y el tiempo estimado de recuperación de las variables. Los analistas esperan desviaciones coherentes con episodios de desaceleración económica, siendo más informativa la duración esperada de los desequilibrios.
+
+En general, la llegada mensual de turistas, el desempleo, la inversión y los ingresos fiscales resaltan por ser las variables que más durarían en retornar a sus niveles previos a la pandemia. Algunas de estas variables con distribuciones bimodales entre 12 y 24 meses para recuperarse.
+
+Comparado con los resultados de abril, no se registraron variaciones importantes en la opinión de los analistas.
+
+</div>
+
+<div class="right">
+#### Expectativas: tiempo de recuperación de variables macroeconómicas
+```{r covid, fig.width=5.5, fig.height=7}
+tiempo_recuperacion_eem
+```
+</div>
+</div>
+
+
