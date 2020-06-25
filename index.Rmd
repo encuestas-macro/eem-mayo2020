@@ -79,7 +79,7 @@ plt_depreciacion %>%
 <div class="pib-container">
 <div class="left">
 
-En cuanto al crecimiento del PIB, las expectativas mantienen una tendencia negativa en los distintos horizontes. En efecto, en la medición de mayo la mediana de las espectitvas se colocó en -2.0%, con un mínimo de -3.6% y un máximo de 0.5%. A pesar de la reducción de los pronóticos, también se pudo apreciar una reducción en la disperción de las respuestas respecto a abril.
+En cuanto al crecimiento del PIB, las expectativas mantienen una tendencia negativa en los distintos horizontes. En efecto, en la medición de mayo la mediana de las espectitvas se colocó en -2.0%, con un mínimo de -3.6% y un máximo de 0.5%. A pesar de la reducción de los pronóticos, también se pudo apreciar una reducción en la dispersión de las respuestas respecto a abril.
 
 El promedio de las expectativas de crecimiento para el 2021 pasó de 5.1% en enero del 2020 a 4.2% en la medición de mayo, para una corrección a la baja producto de los efectos adversos de la pandemia del COVID-19. Con esta reducción de las expectativas, también se observa un incremento en la dispersión de los pronósticos.
 
